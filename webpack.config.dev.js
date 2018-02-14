@@ -3,6 +3,7 @@ import path from 'path';
 export default {
     entry: path.join(__dirname,'client/index.js'),
     output:{
+      filename: 'bundle.js',
       path:'/'
     },
     module: {
@@ -15,6 +16,6 @@ export default {
       ]
     },
     resolve: {
-      extensions: ['.js']
+       extensions: [' ', '.js']
     }
 }

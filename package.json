@@ -1,7 +1,7 @@
 {
-  "name": "reactapp2",
-  "version": "1.0.0",
-  "description": "",
+  "name": "React simple boilerplate",
+  "version": "0.0.3",
+  "description": "Simple, working boilerplate with all the tools you need",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch server --exec babel-node -- server/index.js",
