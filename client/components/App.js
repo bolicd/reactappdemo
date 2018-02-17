@@ -2,6 +2,9 @@ import React from 'react';
 
 export default () =>{
   return (
-    <h1>Hello world</h1>
+    <div>
+    <h1>Hello world hot</h1>
+    <h2>Works with functional components!</h2>
+    </div>
   );
 }

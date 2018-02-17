@@ -1,1 +1,3 @@
 - switch to babel-env
+- switch to yarn?
+- add readme.md
