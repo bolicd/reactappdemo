@@ -1,10 +1,17 @@
 import React from 'react';
+import NavigationBar from './NavigationBar';
+import { Route } from 'react-router-dom';
+import SignupForm from './SignupForm';
 
-export default () =>{
-  return (
-    <div>
-    <h1>Hello world hot</h1>
-    <h2>Works with functional components!</h2>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <NavigationBar />
+        <Route path="/signup" component={SignupForm} />
+      </div>
+    );
+  }
 }
+
+export default App;
