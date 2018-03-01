@@ -5,6 +5,7 @@ import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.config.dev.js';
+import mockRoutes from './mockRoutes';
 
 let app = express();
 const compiler = webpack(webpackConfig);
@@ -15,6 +16,8 @@ app.use(webpackMiddleware(compiler, {
   noInfo: true // turns off verbose webpack messages
 }));
 app.use(webpackHotMiddleware(compiler))
+
+app.use('/api/news', mockRoutes);
 
 app.get('/*', (req, res) => {
    res.sendFile(path.join(__dirname,'./index.html'));
