@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class SignupForm extends React.Component {
+class SignupForm extends React.Component {
 
 constructor(props){
   super(props);
@@ -18,7 +19,7 @@ onChange(e){
 
 onSubmit(e){
   e.preventDefault();
-  console.log(this.state);
+  this.props.sendMockForm(this.state);
 }
 
 render(){
@@ -38,5 +39,10 @@ render(){
     </form>
   )
 }
-
 };
+
+SignupForm.propTypes = {
+  sendMockForm: PropTypes.func.isRequired
+};
+
+export default SignupForm;
