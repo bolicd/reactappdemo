@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import getMockData from './../actions/getMockData';
+import getMockData from "./../actions/getMockData";
 
 class MainPageComponent extends React.Component {
   constructor(props) {
@@ -11,22 +11,16 @@ class MainPageComponent extends React.Component {
     this.props.getMockData();
   }
 
-
   render() {
-    debugger;
-    console.log(this.props.mockData);
-  return (
-    <div className="container">
-      Main news
-      
-    </div>
-  );
+    console.log(this.props.news);
+
+    return <div className="container">Main news</div>;
   }
 }
 
 function mapStateToProps(state) {
-  debugger;
-  return { mockData: state.mockData };
+  const { mockData } = state;
+  return { news: (mockData && mockData.news && mockData.news.data) || [] };
 }
 
 export default connect(mapStateToProps, { getMockData })(MainPageComponent);
