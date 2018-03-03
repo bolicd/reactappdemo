@@ -1,0 +1,1 @@
+export const GET_MOCK_DATA = 'GET_MOCK_DATA';

@@ -1,11 +1,32 @@
 import React from "react";
+import { connect } from "react-redux";
+import getMockData from './../actions/getMockData';
 
-export default class MainPageComponent extends React.Component {
+class MainPageComponent extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  componentWillMount() {
+    this.props.getMockData();
+  }
+
+
   render() {
-    return <div className="container">Main page component!</div>;
+    debugger;
+    console.log(this.props.mockData);
+  return (
+    <div className="container">
+      Main news
+      
+    </div>
+  );
   }
 }
+
+function mapStateToProps(state) {
+  debugger;
+  return { mockData: state.mockData };
+}
+
+export default connect(mapStateToProps, { getMockData })(MainPageComponent);
