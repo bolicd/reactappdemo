@@ -35,8 +35,8 @@ let mockData = [
   }
 ];
 router.get('/',(req, res) =>{
-  console.log('get ok');
-  res.status(200).json(mockData);
+  // 2 sec delay added
+  setTimeout((function() {res.status(200).json(mockData)}), 2000);
 });
 
 export default router;
