@@ -25,6 +25,10 @@ export default {
                 include: path.join(__dirname, 'client'),
                 loaders: ['react-hot-loader/webpack','babel-loader'],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use:['style-loader','css-loader']
             }
         ]
     },
