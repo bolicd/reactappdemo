@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../styles/styles.css';
 
 const LoaderHoc = (OriginalCompoment) =>{
     return class LoaderHoc extends Component{
         render(){
-            return <OriginalCompoment {...this.props}/>;
+            return this.props.newsLoading ? <div className="loader center-position"></div> : <OriginalCompoment {...this.props}/>;
         }
     }
 };
