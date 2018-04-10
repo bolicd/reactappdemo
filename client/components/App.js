@@ -5,7 +5,6 @@ import SignupComponent from "./SignupComponent";
 import MainPageComponent from "./MainPageComponent";
 import '../styles/styles.css';
 
-
 class App extends React.Component {
   render() {
     return (
