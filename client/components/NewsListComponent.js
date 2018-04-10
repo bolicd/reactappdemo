@@ -34,4 +34,4 @@ NewsListComponent.propTypes = {
     newsLoading: PropTypes.bool.isRequired
 };
 
-export default LoaderHoc(NewsListComponent);
+export default LoaderHoc('newsList')(NewsListComponent);
